@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stephen Irinoye portfolio website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/avatar.jpg" class="img" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact me</a></li>
+            <li><a href="https://github.com/Stephen-I">Github</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/stephen-irinoye-08408426b/"
+                >Linkedin</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>
+            Aspiring Full-stack developer | University of Portsmouth graduate
+          </p>
+          <h1>Hi I'm <span>Stephen Irinoye</span></h1>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------about--------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/job_pic.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p class="about-body">
+              I am a full-stack developer with a passion for building user
+              friendly software. I have developed a solid foundation by
+              graduating from a 13 week Northcoders bootcamp, as well as gaining
+              a Udemy certification for basic JavaScript, HTML and CSS. Using
+              this foundation I have further developed my coding skills using
+              various sources to gain certification for coding languages such as
+              C++. I am confident in my front end development skills especially
+              ones utilizing technologies like React but am still happy learning
+              newer technologies on the fly as I have had to do in one of my
+              previous projects that utilized react-native and firebase. I am
+              eager to take on new challenges and continue to expand my
+              repertoire for future professional growth. I have gained my
+              certification for C# as well as self taught myself PHP web design
+              skills resulting in the creation of my first PHP website.
+            </p>
+            <div class="tab-titles">
+              <p
+                class="tab-links active-link"
+                onclick="openTab('coding languages')"
+              >
+                Coding Languages
+              </p>
+              <p class="tab-links" onclick="openTab('technologies')">
+                Technologies
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="coding languages">
+              <ul>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>C#</li>
+                <li>C++</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="technologies">
+              <ul>
+                <li>React</li>
+                <li>React-native</li>
+                <li>Mysql</li>
+                <li>Jest</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2017</span><br />National citizenship service</li>
+                <li><span>2018</span><br />Mcdonalds Kitchen team member</li>
+                <li><span>2021 - 2022</span><br />ASDA Warehouse Operative</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2011 - 2016</span><br />Borden Grammar School</li>
+                <li>
+                  <span>2016 - 2018</span><br />Queen Elizabeths Grammar school
+                </li>
+                <li><span>2018 - 2021</span><br />University of Portsmouth</li>
+                <li><span>2023 - 2023</span><br />Northcoders Bootcamp</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------projects--------------- -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+          <ul>
+            <li>
+              <a href="https://github.com/Stephen-I/portfolio-project"
+                >My Final solo back-end project for bootcamp</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Stephen-I/Final-project-nc-games"
+                >My Final solo front-end project for bootcamp</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Stephen-I/fe-tiny-react-apps"
+                >My introduction to react during bootcamp</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Daniel17971/city-legends-frontend"
+                >Final group projects during bootcamp</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Stephen-I/First_PHP_WEB"
+                >My First PHP website</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------contact me--------------- -->
+    <div id="contact">
+      <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <p class="contact-info">07887241643</p>
+        <p class="contact-info">stephenirinoye@outlook.com</p>
+        <a href="images/Stephen Irinoye Main CV.pdf" download class="btn btn2"
+          >Download CV</a
+        >
+      </div>
+    </div>
+    <script>
+      const tabLinks = document.getElementsByClassName("tab-links");
+      const tabContents = document.getElementsByClassName("tab-contents");
+
+      function openTab(tabName) {
+        for (tabLink of tabLinks) {
+          tabLink.classList.remove("active-link");
+        }
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
